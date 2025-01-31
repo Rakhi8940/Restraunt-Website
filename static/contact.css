@@ -1,0 +1,147 @@
+/* General Styles */
+html, body {
+    height: 100%; /* Ensure full height for both html and body */
+    margin: 0; /* Remove default margin */
+    overflow: hidden; /* Prevent scrolling */
+}
+
+body {
+    background-color: #f2f2f2; /* Lighter, warmer background color */
+    font-family: "Lato", sans-serif;
+    color: #1c0505; /* Dark text for better readability */
+}
+
+/* Header (Navbar) */
+header {
+    margin: 0;
+    background: linear-gradient(135deg, #ffbb00, #e30808); /* Deep red to warm orange gradient */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 10px 0; /* Reduced height of navbar */
+}
+
+.navbar {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto auto; /* Centers the navbar */
+}
+
+.navbar .logo {
+    font-size: 2rem; /* Reduced logo size */
+    font-weight: bolder;
+    color: #fff; /* White color for logo */
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    width: 70px; /* Adjusted logo size */
+    margin-right: 0.6rem;
+}
+
+.nav_items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_items li {
+    list-style: none;
+    padding: 0.3rem; /* Reduced padding for navbar items */
+}
+
+.nav_items li a {
+    text-decoration: none;
+    color: #fff; /* White text for links */
+    font-weight: bolder;
+    font-size: 1.5rem; /* Reduced font size */
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+.nav_items li a:hover {
+    color: #1A1110; /* Dark color on hover */
+}
+
+
+/* Contact Section */
+.contact-section {
+    padding: 5% 0 0%; /* Adjusted padding for contact section */
+    background: linear-gradient(135deg, #ff2701, #ffcc00); /* Red to yellow gradient */
+    height: 100%; /* Full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the content */
+    align-items: center; /* Horizontally center the content */
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    padding: 2rem;
+    background-color: rgba(39, 7, 7, 0.7); /* Dark background for contrast */
+    border-radius: 10px; /* Rounded corners */
+}
+
+h1 {
+    font-size: 2.5em; /* Reduced font size */
+    color: #fff; /* White text */
+    text-align: center;
+    font-weight: bolder;
+    font-family: "Playfair Display", serif;
+    padding-bottom: 1.5rem; /* Reduced space below the title */
+}
+
+p {
+    color: #ddd; /* Light grey text */
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.2rem; /* Adjusted font size */
+    padding-bottom: 1rem; /* Reduced padding below paragraph */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Reduced space between form elements */
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 1em;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff3b3; /* Yellow background for inputs */
+    color: #160707; /* Dark text for readability */
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    background-color: #fff3b3; /* Light yellow background on focus */
+    outline: none;
+}
+
+.contact-form button {
+    padding: 12px 30px; /* Increased padding for better visibility */
+    background-color: #ff2802; /* Red button */
+    border: none;
+    color: #fff3b3;
+    font-weight: bolder;
+    font-size: 1.3em; /* Slightly larger text */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 100%; /* Button spans full width */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.contact-form button:hover {
+    background-color: #cc7a00; /* Darker red on hover */
+    color: #fff; /* Keep text white */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}

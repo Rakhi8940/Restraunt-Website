@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Body & Background */
+body {
+    background: linear-gradient(135deg, rgb(244, 216, 108), #ff1900);
+    color: #333; /* Darker text for readability */
+    font-weight: bolder;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #ff6347, #ffcc00); /* Red to yellow gradient */
+    padding: 20px 0;
+    text-align: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+header .logo span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff; /* White text for logo */
+}
+
+header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header ul li {
+    margin-left: 20px;
+}
+
+header ul li a {
+    color: #333; /* Dark text for links */
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+header ul li a:hover {
+    text-decoration: underline;
+    color: #ffcc00; /* Yellow on hover */
+}
+
+.signup-section {
+    text-align: center;
+    padding: 20px 20px;
+    margin-top: 60px; /* Increased margin-top to create space above */
+    max-width: 800px;
+    margin: auto;
+    background: linear-gradient(135deg, #ff6347, #ffcc00); /* Red to yellow gradient */
+    border-radius: 8px;
+}
+
+.signup-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'Playwrite CU', cursive;
+    color: #ffffff; /* White text for headings */
+}
+
+.signup-section p {
+    font-size: 1.2rem;
+    color: #fff; /* White text for the paragraph */
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+/* Form Styling */
+form {
+    background: linear-gradient(135deg, #ff6347, #ffcc00); /* Red to yellow gradient */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #333; /* Dark text for labels */
+    font-weight: bold;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ff6347; /* Red border for input fields */
+    border-radius: 5px;
+    outline: none;
+    background-color: #fff7e6; /* Light yellow background for input fields */
+    color: #333; /* Dark text inside the input fields */
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="password"]:focus {
+    border-color: #ffcc00; /* Yellow on focus */
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    padding: 12px 20px;
+    background-color: #ff6347; /* Tomato red for CTA button */
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #ff4500; /* Darker red on hover */
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #ff6347, #ffcc00); /* Red to yellow gradient */
+    color: #333; /* Darker text for footer */
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Media Queries for Responsiveness */
+@media only screen and (max-width: 768px) {
+    .signup-section h1 {
+        font-size: 2rem;
+    }
+
+    .signup-section p {
+        font-size: 1rem;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    button[type="submit"] {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .signup-section {
+        padding: 20px;
+    }
+
+    .signup-section h1 {
+        font-size: 1.8rem;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    button[type="submit"] {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+}
