@@ -6,6 +6,27 @@
     <title>Login - Food In</title>
     <link rel="stylesheet" href="/static/login.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <script>
+        // Simulate login check (You can modify this logic to connect to your backend)
+        function handleLogin(event) {
+            event.preventDefault();  // Prevent form submission
+
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            // Simulated login logic (you can replace this with a backend call)
+            if (email === "user@example.com" && password === "password123") {
+                // Successful login
+                alert("Login successful!");
+            } else if (email === "" || password === "") {
+                // Check if any field is empty
+                alert("Please fill in both email and password.");
+            } else {
+                // No matching account
+                alert("No account found. Kindly sign up.");
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -24,7 +45,7 @@
     <section class="login-section">
         <div class="login-container">
             <h2>Login to Your Account</h2>
-            <form action="#" method="POST" class="login-form">
+            <form action="#" method="POST" class="login-form" onsubmit="handleLogin(event)">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required placeholder="Enter your email">
 
@@ -37,8 +58,6 @@
             <p>Don't have an account? <a href="/templates/signup.html">Sign up here</a></p>
         </div>
     </section>
-
-    <static></static>
 
     <footer>
         <div class="footer_container">

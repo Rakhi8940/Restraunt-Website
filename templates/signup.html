@@ -5,6 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Signup</title>
     <link rel="stylesheet" href="/static/signup.css">
+    <script>
+        function handleSignup(event) {
+            event.preventDefault(); // Prevent form submission to handle validation first
+            
+            // Get form values
+            const firstName = document.getElementById("firstName").value;
+            const lastName = document.getElementById("lastName").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
+            const terms = document.getElementById("terms").checked;
+
+            // Check if all required fields are filled
+            if (!firstName || !lastName || !email || !phone || !password || !confirmPassword) {
+                alert("Please fill out all the fields.");
+                return;
+            }
+
+            // Check if passwords match
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return;
+            }
+
+            // Check if terms and conditions are agreed to
+            if (!terms) {
+                alert("You must agree to the terms and conditions.");
+                return;
+            }
+
+            // If everything is valid, simulate a successful signup
+            alert("Signup successful! Welcome to the Food In community!");
+            // Optionally, you can submit the form here, but we will prevent it in this case to keep it simple
+            // document.querySelector('form').submit();
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -23,7 +60,7 @@
         <h1>Sign Up for Exclusive Offers and Updates</h1>
         <p>Join our community and be the first to know about special events, promotions, and new menu items!</p>
 
-        <form action="submit_signup.php" method="POST">
+        <form onsubmit="handleSignup(event)">
             <div class="form-group">
                 <label for="firstName">First Name:</label>
                 <input type="text" id="firstName" name="firstName" required placeholder="Enter your first name">
